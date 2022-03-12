@@ -18,13 +18,34 @@ header span{
 }
 
 .profile{
-  
   border-right: 2px solid black;
-  width: 200px;
-  height: max-content;
+  width: 230px;
+  height: 100%;
+  position: fixed!important;
+  /* text-align: left;
+  text-indent: 3px; */
+  z-index: 1;
+  overflow: auto;
+  clear: right;
+  background-color: #073763;
+}
+
+.pfp{
+  border: 3px white solid;
+  border-radius: 50%;
+  margin-left: 22px;
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+
+.profile div {
+  text-align: center;
+  font-size: xx-large;
 }
 
 .description{
-  
+  border: 3px solid green;
   margin: 0 2rem;
+  margin-left: 14.7rem;
+  position: fixed!important;
 }
