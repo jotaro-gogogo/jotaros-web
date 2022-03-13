@@ -6,6 +6,11 @@ body{
   margin: 0;
 }
 
+a, a:visited{
+  text-decoration: none;
+  color: blue;
+}
+
 header{
   margin-top: 6px;
   border-bottom: 2px solid black;
@@ -22,8 +27,6 @@ header span{
   width: 230px;
   height: 100%;
   position: fixed!important;
-  /* text-align: left;
-  text-indent: 3px; */
   z-index: 1;
   overflow: auto;
   clear: right;
@@ -43,9 +46,25 @@ header span{
   font-size: xx-large;
 }
 
+.links{
+  color: white;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.icons{
+  margin-top: 10px;
+}
+
+.icons a img{
+  width: 32px;
+}
+
 .description{
-  border: 3px solid green;
   margin: 0 2rem;
-  margin-left: 14.7rem;
-  position: fixed!important;
+  margin-left: 16.3rem;
+}
+
+.description p{
+  font-size: 1.3rem;
 }
