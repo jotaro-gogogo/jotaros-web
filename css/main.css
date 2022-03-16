@@ -15,6 +15,10 @@ a, a:visited{
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: minmax(100px, auto);
+<<<<<<< HEAD
+=======
+  /* border: 3px green solid; */
+>>>>>>> test
 }
 
 header{
@@ -22,6 +26,10 @@ header{
   border-bottom: 2px solid black;
   text-align: center;
   grid-column: 1/-1;
+<<<<<<< HEAD
+=======
+  position: relative;
+>>>>>>> test
 }
 
 header span{
