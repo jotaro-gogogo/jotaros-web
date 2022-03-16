@@ -11,10 +11,17 @@ a, a:visited{
   color: blue;
 }
 
+.wrapper{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: minmax(100px, auto);
+}
+
 header{
   margin-top: 6px;
   border-bottom: 2px solid black;
   text-align: center;
+  grid-column: 1/-1;
 }
 
 header span{
@@ -24,19 +31,14 @@ header span{
 
 .profile{
   border-right: 2px solid black;
-  width: 230px;
-  height: 100%;
-  position: fixed!important;
-  z-index: 1;
-  overflow: auto;
-  clear: right;
   background-color: #073763;
+  grid-column: 1;
+  grid-row: 2/-1;
 }
 
 .pfp{
   border: 3px white solid;
   border-radius: 50%;
-  margin-left: 22px;
   margin-top: 22px;
   margin-bottom: 10px;
 }
@@ -62,7 +64,7 @@ header span{
 
 .description{
   margin: 0 2rem;
-  margin-left: 16.3rem;
+  grid-column: 2/-1;
 }
 
 .description p{
