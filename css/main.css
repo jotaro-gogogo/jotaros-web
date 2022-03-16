@@ -15,10 +15,6 @@ a, a:visited{
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: minmax(100px, auto);
-<<<<<<< HEAD
-=======
-  /* border: 3px green solid; */
->>>>>>> test
 }
 
 header{
