@@ -4,6 +4,7 @@
 
 body{
   margin: 0;
+  height: 100vh;
 }
 
 a, a:visited{
@@ -14,14 +15,20 @@ a, a:visited{
 .wrapper{
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: minmax(100px, auto);
+  grid-template-rows: 105px;
+  height: 100vh;
 }
 
 header{
-  margin-top: 6px;
+  background-color: white;
+  padding-top: 6px;
   border-bottom: 2px solid black;
   text-align: center;
   grid-column: 1/-1;
+  /* Next is to make header stick to the top */
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 header span{
@@ -34,6 +41,10 @@ header span{
   background-color: #073763;
   grid-column: 1;
   grid-row: 2/-1;
+  height: 100%;
+  position: fixed;
+  padding-top: 105px;
+  width: 225px;
 }
 
 .pfp{
@@ -64,8 +75,10 @@ header span{
 }
 
 .description{
-  margin: 0 2rem;
+  margin: 2rem;
+  margin-top: 105px;
   grid-column: 2/-1;
+  width: 90%;
 }
 
 .description p{
