@@ -25,10 +25,6 @@ header{
   border-bottom: 2px solid black;
   text-align: center;
   grid-column: 1/-1;
-  /* Next is to make header stick to the top */
-  position: fixed;
-  width: 100%;
-  z-index: 1;
 }
 
 header span{
@@ -42,9 +38,6 @@ header span{
   grid-column: 1;
   grid-row: 2/-1;
   height: 100%;
-  position: fixed;
-  padding-top: 105px;
-  width: 225px;
 }
 
 .pfp{
@@ -75,10 +68,8 @@ header span{
 }
 
 .description{
-  margin: 2rem;
-  margin-top: 105px;
+  margin: 0 2rem;
   grid-column: 2/-1;
-  width: 90%;
 }
 
 .description p{
