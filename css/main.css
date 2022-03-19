@@ -41,22 +41,27 @@ header span{
 }
 
 .pfp{
+  margin: 15px auto; 
+}
+.pfp>img{
   border: 3px white solid;
   border-radius: 50%;
-  margin-left: 20px;
-  margin-top: 22px;
-  margin-bottom: 10px;
+  width: 80%;
 }
 
 .profile div {
   text-align: center;
+}
+
+.lang{
   font-size: xx-large;
 }
 
 .links{
   color: white;
   font-weight: bold;
-  padding-top: 10px;
+  padding-top: 25px;
+  font-size: xx-large;
 }
 
 .icons{
@@ -74,4 +79,113 @@ header span{
 
 .description p{
   font-size: 1.3rem;
+}
+
+/* For 4K screens */
+@media (min-width: 2560px){
+  .wrapper{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 150px;
+    height: 100vh;
+  }
+
+  header span{
+    font-size: 8rem;
+    letter-spacing: 10px;
+  }
+
+
+  .profile{
+    border-right: 2px solid black;
+    background-color: #073763;
+    grid-column: 1;
+    grid-row: 2;
+    height: 100%;
+  }
+
+  .pfp>img{
+    margin: 20px auto;
+    border: 3px white solid;
+    border-radius: 50%;
+  }
+
+  .lang{
+    margin-top: -5px;
+    margin-bottom: 0px;
+    font-size: 3rem;
+  }
+
+  .links{
+    font-size: 2.6rem;
+  }
+
+  .profile>.icons>a>img{
+    width: 45px;
+  }
+}
+
+/* From 1200 to 1440, because sidebar info would look weird */
+@media (min-width: 1200px) and (max-width: 1440px){
+  .links{
+    font-size: 1.8rem;
+  }
+
+  .profile>.icons>a>img{
+    width: 1.7rem;
+  }
+}
+
+/* For mid size laptop screen */
+@media (min-width: 1000px) and (max-width: 1199px){
+  .lang{
+    font-size: 1.8rem;
+    margin-bottom: -10px;
+  }
+
+  .links{
+    font-size: 1.5rem;
+  }
+
+  .profile>.icons>a>img{
+    width: 1.7rem;
+  }
+}
+
+/* For tablet */
+@media (min-width: 651px) and (max-width: 999px){
+  .profile{
+    display: none;
+  }
+
+  .description{
+    grid-column: 1/-1;
+  }
+}
+
+/* Mobile 425 to 767 */
+@media (max-width: 650px){
+  .profile{
+    display: none;
+  }
+
+  .wrapper{
+    grid-template-rows: 60px;
+  }
+
+  header{
+    padding-top: 3px;
+  }
+
+  header span{
+    font-size: 3rem;
+  }
+
+  .description{
+    grid-column: 1/-1;
+  }
+
+  .description h1{
+    font-size: x-large;
+  }
 }
