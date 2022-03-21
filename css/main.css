@@ -81,6 +81,14 @@ header span{
   font-size: 1.3rem;
 }
 
+.description>span{
+  padding-bottom: 1rem;
+}
+
+.hidden-mobile{
+  display: none;
+}
+
 /* For 4K screens */
 @media (min-width: 2560px){
   .wrapper{
@@ -161,10 +169,15 @@ header span{
   .description{
     grid-column: 1/-1;
   }
+
+  .hidden-mobile{
+    display: block;
+    font-size: x-large;
+  }
 }
 
-/* Mobile 425 to 767 */
-@media (max-width: 650px){
+/* Mobile 350 to 650 */
+@media (min-width: 350px) and (max-width: 650px){
   .profile{
     display: none;
   }
@@ -186,6 +199,43 @@ header span{
   }
 
   .description h1{
+    font-size: x-large;
+  }
+
+  .hidden-mobile{
+    display: block;
+    font-size: x-large;
+  }
+}
+
+/* For absolutely who!? 349 and lesser... */
+@media (max-width: 349px){
+  .profile{
+    display: none;
+  }
+
+  .wrapper{
+    grid-template-rows: 60px;
+  }
+
+  header{
+    padding-top: 5px;
+  }
+
+  header span{
+    font-size: 2.7rem;
+  }
+
+  .description{
+    grid-column: 1/-1;
+  }
+
+  .description h1{
+    font-size: x-large;
+  }
+
+  .hidden-mobile{
+    display: block;
     font-size: x-large;
   }
 }
