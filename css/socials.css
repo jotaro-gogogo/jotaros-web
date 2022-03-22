@@ -4,11 +4,18 @@
 
 body{
   margin: 0;
+  margin-bottom: 30px;
   height: 100vh;
 }
 
 .wrapper{
   margin: 0 2rem;
+  padding-bottom: 10px;
+}
+
+.clr{
+  clear: both;
+  font-size: 0;
 }
 
 a, a:visited{
@@ -29,13 +36,60 @@ header span{
   font-family: 'Bebas Neue', cursive;
 }
 
+/* Themes */
+@media (prefers-color-scheme: dark){
+  body{
+    background-color: #333;
+  }
+
+  body p{
+    color: #eee;
+  }
+
+  a, a:visited{
+    text-decoration: none;
+    color: #5996d4;
+  }
+
+  header{
+    background-color: #222;
+  }
+
+  header>span{
+    color: #eee;
+  }
+
+  ul li{
+    color: #eee;
+  }
+}
+
+/* Tablets from 750 to 999 */
+@media (min-width: 750px) and (max-width: 999px){
+  .wrapper>p{
+    margin: 20px 3rem;
+    font-size: 3.5rem;
+  }
+
+  ul{
+    margin-left: 3rem;
+  }
+
+  li{
+    font-size: xx-large;
+    margin-bottom: 30px;
+  }
+}
+
 /* For tablet */
-@media (min-width: 651px) and (max-width: 999px){
+@media (min-width: 651px) and (max-width: 749px){
   .wrapper>p{
     font-size: xx-large;
   }
-  ul>li>a{
+
+  li{
     font-size: x-large;
+    margin-bottom: 20px;
   }
 }
 
@@ -51,11 +105,15 @@ header span{
   }
 
   p{
-    font-size: x-large;
+    font-size: xx-large;
   }
 
   ul{
-    font-size: large;
+    font-size: x-large;
+  }
+
+  li{
+    margin-bottom: 30px;
   }
 }
 
@@ -70,11 +128,22 @@ header span{
   }
 
   p{
-    font-size: large;
+    font-size: xx-large;
+  }
+
+  ul{
+    font-size: x-large;
+  }
+
+  li{
+    margin-bottom: 30px;
   }
 }
 
-/* For absolutely who!? 349 and lesser... */
+/* For absolutely who!? 349 and lesser...
+** OMG no, actually it is possible that some
+** phones have this resolution, I so dumb.
+*/
 @media (max-width: 349px){
   header{
     padding-top: 5px;
@@ -85,6 +154,11 @@ header span{
   }
 
   p{
+    font-size: x-large;
+  }
+
+  li{
     font-size: large;
+    margin-bottom: 20px;
   }
 }
