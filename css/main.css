@@ -7,11 +7,6 @@ body{
   height: 100vh;
 }
 
-a, a:visited{
-  text-decoration: none;
-  color: blue;
-}
-
 .wrapper{
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -20,7 +15,6 @@ a, a:visited{
 }
 
 header{
-  background-color: white;
   padding-top: 6px;
   border-bottom: 2px solid black;
   text-align: center;
@@ -30,6 +24,11 @@ header{
 header span{
   font-size: 5rem;
   font-family: 'Bebas Neue', cursive;
+}
+
+a, a:visited{
+  text-decoration: none;
+  color: blue;
 }
 
 .profile{
@@ -87,6 +86,61 @@ header span{
 
 .hidden-mobile{
   display: none;
+}
+
+/* Themes */
+/* @media (prefers-color-scheme: light){
+  body{
+    background-color: white;
+  }
+
+  a, a:visited{
+    text-decoration: none;
+    color: blue;
+  }
+
+  header{
+    background-color: white;
+  }
+
+  header>span{
+    color: black;
+  }
+
+  .profile{
+    background-color: #073763;
+  }
+
+  .description{
+    color: black;
+  }
+} */
+
+@media (prefers-color-scheme: dark){
+  body{
+    background-color: #333;
+  }
+
+  a, a:visited{
+    text-decoration: none;
+    color: #5996d4;
+  }
+
+  header{
+    background-color: #222;
+  }
+
+  header>span{
+    color: #eee;
+  }
+
+  .profile{
+    background-color: #111;
+  }
+
+  .description{
+    color: #eee;
+  }
 }
 
 /* For 4K screens */
