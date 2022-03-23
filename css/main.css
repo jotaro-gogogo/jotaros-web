@@ -22,9 +22,11 @@ body{
   margin: 0;
   height: 100vh;
   background-color: var(--main-bg-color);
+  transition: background-color 0.4s;
 }
 body.dark{
   background-color: var(--dark-bg-color);
+  transition: background-color 0.5s;
 }
 
 .wrapper{
@@ -40,9 +42,11 @@ header{
   text-align: center;
   grid-column: 1/-1;
   position: relative;
+  transition: background-color 0.5s;
 }
 header.dark{
   background-color: var(--dark-header);
+  transition: background-color 0.5s;
 }
 
 header span{
@@ -63,9 +67,11 @@ header span.dark{
   border-top-left-radius: 10px;
   background-color: #333;
   cursor: pointer;
+  transition: background-color 0.5s;
 }
 .trigger.dark{
   background-color: #eee;
+  transition: background-color 0.5s;
 }
 
 .fa-moon{
@@ -82,11 +88,11 @@ header span.dark{
   margin-left: 5%;
 }
 
-a, a:visited{
+#linkTo{
   text-decoration: none;
   color: blue;
 }
-a.dark, a.dark:visited{
+#linkTo.dark{
   color: #5996d4;
 }
 
@@ -96,9 +102,12 @@ a.dark, a.dark:visited{
   grid-column: 1;
   grid-row: 2/-1;
   height: 100%;
+  transition: background-color 0.5s;
 }
 .profile.dark{
   background-color: var(--dark-bg-profile);
+  transition: background-color 0.5s;
+  
 }
 
 .pfp{
@@ -186,7 +195,7 @@ a.dark, a.dark:visited{
     background-color: var(--dark-bg-color);
   }
 
-  a, a:visited{
+  #linkTo, #linkTo:visited{
     text-decoration: none;
     color: #5996d4;
   }
@@ -209,7 +218,7 @@ a.dark, a.dark:visited{
 }
 
 /* For 4K screens */
-@media (min-width: 2560px){
+@media (min-width: 2150px){
   .wrapper{
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: 150px;
@@ -235,16 +244,84 @@ a.dark, a.dark:visited{
   .profile>.icons>a>img{
     width: 45px;
   }
+
+  .description>h1{
+    font-size: 4rem;
+  }
+
+  .description>p{
+    font-size: 3rem;
+  }
+
+  .description>span{
+    font-size: 2rem;
+  }
 }
 
-/* From 1200 to 1440, because sidebar info would look weird */
-@media (min-width: 1200px) and (max-width: 1440px){
+/* 1450 to 2149 */
+@media (min-width: 1450px) and (max-width: 2149px){
+  .wrapper{
+    grid-template-rows: 150px;
+  }
+
+  header span{
+    font-size: 8rem;
+    letter-spacing: 10px;
+  }
+
+  .pfp>img{
+    margin: 20px auto;
+  }
+
+  .lang{
+    font-size: 3.2rem;
+  }
+
   .links{
-    font-size: 1.8rem;
+    font-size: 2.8rem;
   }
 
   .profile>.icons>a>img{
-    width: 1.7rem;
+    width: 48px;
+  }
+
+  .description>h1{
+    font-size: 3rem;
+  }
+
+  .description>p{
+    font-size: 2.3rem;
+  }
+
+  .description>span{
+    font-size: 1.7rem;
+  }
+}
+
+/* From 1200 to 1449, because sidebar info would look weird */
+@media (min-width: 1200px) and (max-width: 1449px){
+  .lang{
+    font-size: 2.4rem;
+  }
+
+  .links{
+    font-size: 2.2rem;
+  }
+
+  .profile>.icons>a>img{
+    width: 36px;
+  }
+
+  .description>h1{
+    font-size: 2.8rem;
+  }
+
+  .description>p{
+    font-size: 2rem;
+  }
+
+  .description>span{
+    font-size: 1.5rem;
   }
 }
 
@@ -268,6 +345,15 @@ a.dark, a.dark:visited{
 @media (min-width: 651px) and (max-width: 999px){
   .profile{
     display: none;
+  }
+
+  .trigger{
+    right: 0;
+    bottom: -105px;
+    width: 40px;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 
   .description{
@@ -298,6 +384,15 @@ a.dark, a.dark:visited{
     font-size: 3rem;
   }
 
+  .trigger{
+    right: 0;
+    bottom: -90px;
+    width: 40px;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
   .description{
     grid-column: 1/-1;
   }
@@ -312,7 +407,11 @@ a.dark, a.dark:visited{
   }
 }
 
-/* For absolutely who!? 349 and lesser... */
+/* For absolutely who!? 349 and lesser... 
+** Actually it's quite possible there's people
+** with screens with this resolution, I'm such an
+** ignorant, my apologies.
+*/
 @media (max-width: 349px){
   .profile{
     display: none;
@@ -328,6 +427,15 @@ a.dark, a.dark:visited{
 
   header span{
     font-size: 2.7rem;
+  }
+
+  .trigger{
+    right: 0;
+    bottom: -90px;
+    width: 40px;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 
   .description{
