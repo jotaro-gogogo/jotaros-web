@@ -307,26 +307,6 @@ a, a:visited{
   .lang{
     font-size: 2.4rem;
   }
-
-  .links{
-    font-size: 2.2rem;
-  }
-
-  .profile>.icons>a>img{
-    width: 36px;
-  }
-
-  .description>h1{
-    font-size: 2.8rem;
-  }
-
-  .description>p{
-    font-size: 2rem;
-  }
-
-  .description>span{
-    font-size: 1.5rem;
-  }
 }
 
 /* For mid size laptop screen */
