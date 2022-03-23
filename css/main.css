@@ -200,7 +200,7 @@ a, a:visited{
     color: #5996d4;
   }
 
-  #linkTo{
+  .hidden-mobile>a, .hidden-mobile>a:visited{
     text-decoration: none;
     color: #5996d4;
   }
