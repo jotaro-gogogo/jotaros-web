@@ -87,6 +87,10 @@ header span.dark{
   margin-top: 11%;
   margin-left: 5%;
 }
+a, a:visited{
+  text-decoration: none;
+  color: blue;
+}
 
 #linkTo{
   text-decoration: none;
@@ -195,7 +199,7 @@ header span.dark{
     background-color: var(--dark-bg-color);
   }
 
-  #linkTo, #linkTo:visited{
+  a, a:visited{
     text-decoration: none;
     color: #5996d4;
   }
