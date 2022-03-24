@@ -1,5 +1,4 @@
 const uAgent = detect.parse(navigator.userAgent);
-console.log(uAgent.os.family);
 if(uAgent.os.family === 'iOS' || uAgent.os.family === 'Mac OS X')
   document.body.style.fontFamily = "-apple-system, BlinkMacSystemFont, 'Helvetica Neue'";
 else if(uAgent.os.family === "Android" || uAgent.os.family === "Chrome OS")
