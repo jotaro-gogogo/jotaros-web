@@ -22,6 +22,7 @@ function changeTheme(){
       myList[i].classList.remove("light");
       myList[i].classList.add("dark");
     }
+    myTarget.style.backgroundColor = "#eee";
     myTarget.innerHTML = `<div class="sun"><i class="fa fa-sun"></i></div>`;
   }
 }
