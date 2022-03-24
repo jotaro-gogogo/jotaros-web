@@ -82,7 +82,7 @@ header span.light{
   transition: background-color 0.5s;
 }
 .trigger.light{
-  background-color: var(--dark-bg-color);
+  background-color: var(--main-bg-color);
   transition: background-color 0.5s;
 }
 
@@ -375,11 +375,7 @@ a.light, a.light:visited{
   }
 
   .trigger{
-    right: 0;
     bottom: -105px;
-    width: 40px;
-    height: 40px;
-    border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
   }
 
@@ -412,11 +408,7 @@ a.light, a.light:visited{
   }
 
   .trigger{
-    right: 0;
     bottom: -90px;
-    width: 40px;
-    height: 40px;
-    border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
   }
 
@@ -457,11 +449,7 @@ a.light, a.light:visited{
   }
 
   .trigger{
-    right: 0;
     bottom: -90px;
-    width: 40px;
-    height: 40px;
-    border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
   }
 
