@@ -25,75 +25,92 @@
   <meta name="twitter:description" content="Now with a dark theme & JS!">
   <meta name="twitter:img:src" content="https://i.imgur.com/ULYGkGk.jpg">
   <!-- End of Twitter cards, as it uses OGP tags as a fallback -->
-  <link rel="stylesheet" href="./css/main.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
   </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+    </style>
   <script src="https://kit.fontawesome.com/dc6ff1c05e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/main02.css">
 </head>
 <body class="def">
   <div class="wrapper">
+    <!---->
+    <!-- Header -->
     <header class="def">
       <span class="def">Misato's Amazing Site</span>
       <div class="trigger def">
-        <div class="moon"><i class="fa fa-moon"></i></div>
+        <div class="moon"><em class="fa fa-moon"></em></div>
       </div>
     </header>
-    <!-- Sidebar -->
-    <div class="profile def">
+    <!-- End of header -->
+    <!---->
+    <main class="def">
       <div class="pfp">
-        <img src="https://i.imgur.com/ULYGkGk.jpg" alt="Profile picture depicting the character Katsuragi Misato, from Neon Genesis Evangelion.">
+        <img src="./assets/images/misato.png" alt="Profile picture depicting the character Katsuragi Misato, from Neon Genesis Evangelion." width="300">
       </div>
-      <div class="lang">🇲🇽 🇺🇸 🇯🇵</div>
-      <div class="links">My links:</div>
-      <div class="icons">
-        <a href="https://github.com/Misato-best-woman" target="_blank">
-          <img src="./assets/icons/github.png" alt="GitHub icon.">
-        </a>
-        <a href="https://twitter.com/MisatoBestWoman" target="_blank">
-          <img src="./assets/icons/twitter.png" alt="Twitter icon.">
-        </a>
-        <a href="https://www.youtube.com/channel/UCLXfMa4SCgBqsU5TUm4-Igg" target="_blank">
-          <img src="./assets/icons/youtube.png" alt="YouTube icon.">
-        </a>
+      <section class="description">
+        <h2>Mexican weeb developer trying to land a job.</h2>
+        <p>
+          Yes, I like anime! how did you know?<br>
+          Among <del>Us</del> my favorite animes & mangas are: Neon Genesis Evangelion, Black Lagoon, Darling in The Franxx & One-Punch Man.<br>
+          You can find what I'm currently watching <a class="def" href="https://myanimelist.net/profile/MisatoBestWoman-" target="_blank">here.</a>
+        </p>
+        <p class="lang">🇲🇽🇺🇸🇯🇵</p>
+      </section>
+    </main>
+
+    <!-- Projects -->
+    <section class="projects def">
+      <h2>My <span>little</span> personal projects.</h2>
+      <p>
+        They are nothing crazy or fancy, but I feel very proud of them.
+      </p>
+      <div class="project-info">
+        <!-- IdSave project infromation. -->
+        <div class="def">
+          <p><a href="http://" target="_blank">
+            IdSave
+          </a></p>
+          <span class="project-description">
+            Python app that stores an image, side note & category into a database.
+          </span>
+        </div>
+
+        <!-- IdView project information. -->
+        <div class="def">
+          <p><a href="http://" target="_blank">
+            IdView
+          </a></p>
+          <span class="project-description def">
+            C# app that reads a database, store entries into a linked list and displays them into a window.
+          </span>
+        </div>
       </div>
+      <p>So what should I code next? In which language? Hmmm... I don't know yet.</p>
+    </section>
   
-      <div class="links" >Wanna play?</div>
-      <div class="icons">
-        <a href="https://live.xbox.com/en-US/Profile?Gamertag=JotaroGOGOGOGO" target="_blank">
-          <img src="./assets/icons/xbox.png" alt="GitHub icon.">
-        </a>
-        <a href="https://discord.com/users/784223888737304618O" target="_blank">
-          <img src="./assets/icons/discord.png" alt="Discord icon.">
-        </a>
-        <a href="https://www.twitch.tv/jotarogogogo" target="_blank">
-          <img src="./assets/icons/twitch.png" alt="Twitch icon.">
-        </a>
+    <footer class="def">
+      <p>
+        You can follow me on 
+        <a class="def" href="https://github.com/Misato-best-woman">GitHub</a> 
+        or send me an e-mail at
+        <a class="def" href="mailto:misato.dev@icloud.com">misato.dev@icloud.com</a>
+      </p>
+      <p class="copy">
+        Misato-best-woman &copy; 2022
+      </p>
       </div>
-    </div><!-- End of sidebar -->
-  
-    <div class="description def">
-      <h1>Mexican weeb developer trying to land a job.</h1>
-      <p>
-        Yes, I like anime! how did you know?<br>
-        You can find what I'm currently watching <a class="def" href="https://myanimelist.net/profile/MisatoBestWoman-" target="_blank">here.</a>
-      </p>
-      <p>
-        The most recent project I'm working on is a little database manager that stores an image followed by a sidenote to help me keep track of my ideas.
-      </p>
-      <p>
-        Wish I could stream but I erased Windows from my machine...<br>
-        So far I only play Call of Duty and Minecraft on my iPhone.
-      </p>
-      <div class="hidden-mobile">
-        <a class="def" href="socials.html">Checkout my socials here!</a>
-      </div>
+    </footer>
+  </div>
+  <!-- <div class="wrapper">
       <section style="padding-top: 1rem;"></section>
       <span><em>Enjoy my site in any resolution, it's responsive.</em> ❤️</span>
     </div>
-  </div>
+  </div> -->
   <script src="./scripts/detect.min.js"></script>
-  <script src="./scripts/font.js"></script>
+  <!-- <script src="./scripts/font.js"></script> -->
   <script src="./scripts/script.js"></script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 /* Variables */
 :root{
   /* Light mode */
-  --main-bg-color: white;
-  --main-text-color: black;
+  --main-bg-color: #fff;
+  --main-text-color: #000;
   --main-bg-profile: #073763;
   --main-footer: #b9b9b9;
 
@@ -11,13 +11,15 @@
   --dark-header: #222;
   --dark-text-color: #eee;
   --dark-bg-profile: #111;
+  --dark-project-info: #acacac;
 }
 
 /* Default (light) mode */
-
 body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
-  height: 100%;
   background-color: var(--main-bg-color);
   transition: background-color 0.4s;
   font-family: Arial, Helvetica, sans-serif;
@@ -26,17 +28,15 @@ body.dark{
   background-color: var(--dark-bg-color);
   transition: background-color 0.5s;
 }
-body.light{
-  background-color: var(--main-bg-color);
-  transition: background-color 0.5s;
-}
 
 .wrapper{
+  flex: 1;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
+/* Header & theme toggle button. */
 header{
   flex: 1;
   padding-top: 6px;
@@ -48,10 +48,6 @@ header.dark{
   background-color: var(--dark-header);
   transition: background-color 0.5s;
 }
-header.light{
-  background-color: var(--main-bg-color);
-  transition: background-color 0.5s;
-}
 
 header span{
   font-size: 8rem;
@@ -61,10 +57,8 @@ header span{
 header span.dark{
   color: var(--dark-text-color);
 }
-header span.light{
-  color: black;
-}
 
+/* The button. */
 .trigger{
   position: absolute;
   right: 0;
@@ -80,11 +74,8 @@ header span.light{
   background-color: var(--dark-text-color);
   transition: background-color 0.5s;
 }
-.trigger.light{
-  background-color: var(--main-bg-color);
-  transition: background-color 0.5s;
-}
 
+/* Button icons. */
 .fa-moon{
   font-size: 32px;
   color: #eee;
@@ -98,26 +89,166 @@ header span.light{
   margin-top: 11%;
   margin-left: 5%;
 }
+/* End of header & button. */
 
+/* Profile picture & description. */
 main{
   display: flex;
   flex: 1;
+  align-items: center;
+  justify-content: space-around;
   background-color: var(--main-bg-profile);
 }
-
-main pfp{
-  flex: 1 1 auto;
+main.dark{
+  background-color: var(--dark-bg-profile);
+  transition: background-color 0.5s;
 }
 
 .pfp{
-  margin: 20px;
-  margin-bottom: 15px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .pfp>img{
   border: 3px white solid;
   border-radius: 50%;
 }
 
+/* Description */
+.description{
+  flex: 1;
+  padding-right: 2rem;
+}
+.description.dark{
+  color: var(--dark-text-color);
+}
+
+.description>*{
+  color: var(--dark-text-color);
+  font-size: 2.5rem;
+}
+
+.description h2{
+  margin-top: 40px;
+  margin-bottom: -15px;
+}
+
+.description p{
+  font-size: 1.8rem;
+}
+
+.description>p>a, .project-info a{
+  text-decoration: underline;
+  color: white;
+  font-weight: bold;
+}
+
+.description>p>a:hover, .project-info a:hover{
+  font-style: italic;
+}
+
+.description>span{
+  padding-bottom: 1rem;
+}
+
+.description>.lang{
+  margin-top: 3px;
+  margin-bottom: -1px;
+  font-size: 2.5rem;
+  letter-spacing: 30px;
+}
+/* End pfp & description */
+
+/* Projects information. */
+.projects{
+  padding-bottom: 35px;
+}
+
+.projects>h2{
+  margin:40px 2rem;
+  font-size: 2.5rem;  
+}
+.projects.dark{
+  color: var(--dark-text-color);
+}
+
+.projects>h2>span{
+  font-size: 1.6rem;
+}
+
+.projects>p{
+  margin: auto 2rem;
+  margin-top: -25px;
+  font-size: 1.8rem;
+}
+
+.project-info{
+  display: flex;
+  margin: auto 6rem;
+  margin-bottom: 20px;
+  padding: 60px 0;
+  justify-content: space-evenly;
+}
+
+.project-info>div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #4d4d4d;
+  padding: 20px 40px;
+  border-radius: 25px;
+  min-height: 250px;
+  color: var(--dark-text-color);
+}
+.project-info>div.dark{
+  background-color: var(--dark-project-info);
+}
+
+.project-info>div>p{
+  font-family: 'Cabin', sans-serif;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.project-description{
+  display: inline-block;
+  max-width: 170px;
+  font-size: 1.4rem;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 1rem 2rem;
+  justify-content: center;
+  font-size: 2rem;
+  background-color: var(--main-footer);
+}
+footer.dark, footer a.dark{
+  background-color: var(--dark-bg-profile);
+  color: var(--dark-text-color);
+}
+
+footer>p>a{
+  color: rgb(77, 77, 77);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+footer>p>a:hover{
+  font-style: italic;
+}
+
+.copy{
+  margin-bottom: -10px;
+  font-size: large;
+}
+
+/* 
 a, a:visited{
   text-decoration: underline;
   color: blue;
@@ -151,16 +282,9 @@ a.light, a.light:visited{
 
 .profile div {
   text-align: center;
-}
+} */
 
-.description>.lang{
-  margin-top: 3px;
-  margin-bottom: -1px;
-  font-size: 2.5rem;
-  letter-spacing: 30px;
-}
-
-.links{
+/* .links{
   color: var(--main-bg-color);
   font-weight: bold;
   padding-top: 25px;
@@ -175,60 +299,14 @@ a.light, a.light:visited{
   width: 32px;
 }
 
-.description{
-  margin: 0 2rem;
-}
-.description.dark{
-  color: var(--dark-text-color);
-}
-.description.light{
-  color: black;
-}
-
-.description>*{
-  color: var(--dark-text-color);
-  font-size: 2.5rem;
-}
-
-.description h2{
-  margin-top: 40px;
-  margin-bottom: -15px;
-}
-
-.description p{
-  font-size: 1.8rem;
-  /* line-height: 50px; */
-}
-
-.description>p>a{
-  text-decoration: underline;
-  color: white;
-  font-weight: bold;
-}
-
-.description>span{
-  padding-bottom: 1rem;
-}
-
 .hidden-mobile{
   display: none;
-}
-
-footer{
-  flex: 0 1 40px;
-  bottom: 10px;
-  background-color: var(--main-footer);
-}
+} */
 
 /* Themes */
 @media (prefers-color-scheme: light){
   body{
     background-color: var(--main-bg-color);
-  }
-
-  a, a:visited{
-    text-decoration: none;
-    color: blue;
   }
 
   header{
