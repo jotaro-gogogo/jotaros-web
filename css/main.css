@@ -39,6 +39,10 @@ body.light {
   height: 100vh;
 }
 
+#speaker {
+    font-size: 16px;
+    cursor: help;
+}
 header {
     padding-top: 7px;
     border-bottom: 2px solid black;

@@ -32,6 +32,10 @@
     @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@600&display=swap');
   </style>
   <script src="https://kit.fontawesome.com/dc6ff1c05e.js" crossorigin="anonymous"></script>
+  <script src="/scripts/detect.min.js" defer></script>
+  <script src="/scripts/font.js" defer></script>
+  <script src="/scripts/script.js" defer></script>
+  <script src="/scripts/sound.js" defer></script>
 </head>
 <body class="def">
   <div class="wrapper">
@@ -75,7 +79,14 @@
     </div><!-- End of sidebar -->
   
     <div class="description def">
-      <h1>Mexican weeb developer trying to land a job.</h1>
+        <h1>Mexican weeb developer trying to land a job.</h1>
+        <p>
+            <em>Jōtarō... <strong>what!?</strong></em> &nbsp; Jōtarōゴゴゴ
+            <button id="speaker" onclick="playAudio()">
+                <i class="fa-solid fa-volume-high"></i>
+            </button>
+            <audio id="pronunciation" src="/assets/audio/jotaro.mp3"></audio>
+        </p>
       <p>
         Yes, I like anime! how did you know?<br>
         You can find what I'm currently watching <a class="def" href="https://myanimelist.net/profile/MisatoBestWoman-" target="_blank">here.</a>
@@ -94,8 +105,5 @@
       <span><em>Enjoy my site in any resolution, it's responsive.</em> ❤️</span>
     </div>
   </div>
-  <script src="./scripts/detect.min.js"></script>
-  <script src="./scripts/font.js"></script>
-  <script src="./scripts/script.js"></script>
 </body>
 </html>
