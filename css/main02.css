@@ -1,512 +1,315 @@
 /* Variables */
 :root{
-  /* Light mode */
-  --main-bg-color: #fff;
-  --main-text-color: #000;
-  --main-bg-profile: #073763;
-  --main-footer: #b9b9b9;
+    /* Light mode */
+    --main-bg-color: #fff;
+    --main-text-color: #000;
+    --main-bg-profile: #073763;
+    --main-footer: #b9b9b9;
 
-  /* Dark mode */
-  --dark-bg-color: #333;
-  --dark-header: #222;
-  --dark-text-color: #eee;
-  --dark-bg-profile: #111;
-  --dark-project-info: #acacac;
+    /* Dark mode */
+    --dark-bg-color: #333;
+    --dark-header: #222;
+    --dark-text-color: #eee;
+    --dark-bg-profile: #111;
+    --dark-project-info: #acacac;
 }
 
 /* Default (light) mode */
 body{
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  background-color: var(--main-bg-color);
-  transition: background-color 0.4s;
-  font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--main-bg-color);
+    transition: background-color 0.4s;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body.dark{
-  background-color: var(--dark-bg-color);
-  transition: background-color 0.5s;
+    background-color: var(--dark-bg-color);
+    transition: background-color 0.5s;
 }
 
 .wrapper{
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 /* Header & theme toggle button. */
 header{
-  flex: 1;
-  padding-top: 6px;
-  text-align: center;
-  position: relative;
-  transition: background-color 0.5s;
+    flex: 1;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.5s;
 }
 header.dark{
-  background-color: var(--dark-header);
-  transition: background-color 0.5s;
+    background-color: var(--dark-header);
+    transition: background-color 0.5s;
 }
 
 header span{
-  font-size: 8rem;
-  font-family: 'Bebas Neue', cursive;
-  color: var(--main-text-color);
+    font-size: 5rem;
+    font-family: 'Bebas Neue', cursive;
+    color: var(--main-text-color);
 }
 header span.dark{
-  color: var(--dark-text-color);
+    color: var(--dark-text-color);
+}
+
+#japanese{ /* The ゴゴゴ on my online persona. */
+    font-family: 'M PLUS 1', sans-serif;
+    font-size: 4.7rem;
+    color: var(--dark-text-color);
 }
 
 /* The button. */
 .trigger{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 40px;
-  height: 40px;
-  border-top-left-radius: 10px;
-  background-color: var(--dark-bg-color);
-  cursor: pointer;
-  transition: background-color 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    border-top-left-radius: 10px;
+    background-color: var(--dark-bg-color);
+    cursor: pointer;
+    transition: background-color 0.5s;
 }
 .trigger.dark{
-  background-color: var(--dark-text-color);
-  transition: background-color 0.5s;
+    background-color: var(--dark-text-color);
+    transition: background-color 0.5s;
 }
 
 /* Button icons. */
 .fa-moon{
-  flex: 1;
-  font-size: 32px;
-  color: var(--dark-text-color);
+    flex: 1;
+    font-size: 32px;
+    color: var(--dark-text-color);
 }
 
 .fa-sun{
-  flex: 1;
-  font-size: 32px;
-  color: var(--main-text-color);  
+    flex: 1;
+    font-size: 32px;
+    color: var(--main-text-color);  
 }
 /* End of header & button. */
 
+/* Main content */
+.content{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--main-bg-profile);
+}
+.content.dark{
+    background-color: var(--dark-bg-profile);
+    transition: background-color 0.5s;
+}
+
+/* Sidebar & social media */
+.fa-github, .fa-twitter, .fa-youtube, .fa-xbox {
+    color: white;
+    font-size: 2.5rem;
+    margin: 3px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+}
+
+img{
+    border: 3px white solid;
+    border-radius: 50%;
+    width: 40%;
+}
+
+.socials {
+    margin-top: 30px;
+}
+
+.lang{
+    font-size: 2.5rem;
+    letter-spacing: 15px;
+    margin-top: 20px;
+}
+
 /* Profile picture & description. */
-main{
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: space-around;
-  background-color: var(--main-bg-profile);
-}
-main.dark{
-  background-color: var(--dark-bg-profile);
-  transition: background-color 0.5s;
-}
-
-.pfp{
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pfp>img{
-  border: 3px white solid;
-  border-radius: 50%;
-  width: 100%;
-}
 
 /* Description */
 .description{
-  flex: 1;
-  padding-right: 2.5rem;
-  margin: auto;
+    flex: 1;
+    padding-right: 2.5rem;
+    margin: auto;
 }
 .description.dark{
-  color: var(--dark-text-color);
+    color: var(--dark-text-color);
 }
 
 .description>*{
-  color: var(--dark-text-color);
-  font-size: 2.5rem;
+    color: var(--dark-text-color);
+    font-size: 2.5rem;
 }
 
 .description p{
-  font-size: 1.8rem;
+    font-size: 1.8rem;
 }
 
 .description>p>a, .project-info a{
-  text-decoration: underline;
-  color: white;
-  font-weight: bold;
+    text-decoration: underline;
+    color: white;
+    font-weight: bold;
 }
 
 .description>p>a:hover, .project-info a:hover{
-  font-style: italic;
-}
-
-.description>.lang{
-  font-size: 2.5rem;
-  letter-spacing: 30px;
+    font-style: italic;
 }
 /* End pfp & description */
 
 /* Projects information. */
 .projects{
-  padding-bottom: 35px;
+    padding-bottom: 35px;
 }
 
 .projects>h2{
-  margin:40px 2rem;
-  font-size: 2.5rem;  
+    margin:40px 2rem;
+    font-size: 2.5rem;  
 }
 .projects.dark{
-  color: var(--dark-text-color);
+    color: var(--dark-text-color);
 }
 
 .projects>h2>span{
-  font-size: 1.6rem;
+    font-size: 1.6rem;
 }
 
 .projects>p{
-  margin: auto 2rem;
-  margin-top: -25px;
-  font-size: 1.8rem;
+    margin: auto 2rem;
+    margin-top: -25px;
+    font-size: 1.8rem;
 }
 
 .project-info{
-  display: flex;
-  margin: auto 6rem;
-  margin-bottom: 20px;
-  padding: 60px 0;
-  justify-content: space-evenly;
+    display: flex;
+    margin: auto 6rem;
+    margin-bottom: 20px;
+    padding: 60px 0;
+    justify-content: space-evenly;
 }
 
 .project-info>div{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: #4d4d4d;
-  padding: 20px 40px;
-  border-radius: 25px;
-  min-height: 250px;
-  color: var(--dark-text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #4d4d4d;
+    padding: 20px 40px;
+    border-radius: 25px;
+    min-height: 250px;
+    color: var(--dark-text-color);
 }
 .project-info>div.dark{
-  background-color: var(--dark-project-info);
+    background-color: var(--dark-project-info);
 }
 
 .project-info>div>p{
-  font-family: 'Cabin', sans-serif;
-  font-size: 3rem;
-  margin: 0;
+    font-family: 'Cabin', sans-serif;
+    font-size: 3rem;
+    margin: 0;
 }
 
 .project-description{
-  display: inline-block;
-  max-width: 170px;
-  font-size: 1.4rem;
+    display: inline-block;
+    max-width: 170px;
+    font-size: 1.4rem;
 }
 
 footer{
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  padding: 1rem 2rem;
-  justify-content: center;
-  font-size: 2rem;
-  background-color: var(--main-footer);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 1rem 2rem;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: var(--main-footer);
 }
 footer.dark, footer a.dark{
-  background-color: var(--dark-bg-profile);
-  color: var(--dark-text-color);
+    background-color: var(--dark-bg-profile);
+    color: var(--dark-text-color);
 }
 
 footer>p>a{
-  color: rgb(77, 77, 77);
-  text-decoration: underline;
-  font-weight: bold;
+    color: rgb(77, 77, 77);
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 footer>p>a:hover{
-  font-style: italic;
+    font-style: italic;
 }
 
 .copy{
-  margin-bottom: -10px;
-  font-size: large;
+    margin-bottom: -10px;
+    font-size: large;
 }
 
 /* Themes */
 @media (prefers-color-scheme: light){
-  body{
-    background-color: var(--main-bg-color);
-  }
+    body{
+        background-color: var(--main-bg-color);
+    }
 
-  header{
-    background-color: var(--main-bg-color);
-  }
+    header{
+        background-color: var(--main-bg-color);
+    }
 
-  header>span{
-    color: var(--main-text-color);
-  }
+    header>span{
+        color: var(--main-text-color);
+    }
 
-  .profile{
-    background-color: var(--main-bg-profile);
-  }
+    .profile{
+        background-color: var(--main-bg-profile);
+    }
 
-  .description{
-    color: var(--main-text-color);
-  }
+    .description{
+        color: var(--main-text-color);
+    }
 }
 
 @media (prefers-color-scheme: dark){
-  body{
-    background-color: var(--dark-bg-color);
-  }
+    body{
+        background-color: var(--dark-bg-color);
+    }
 
-  a, a:visited{
-    text-decoration: none;
-    color: #5996d4;
-  }
+    a, a:visited{
+        text-decoration: none;
+        color: #5996d4;
+    }
 
-  header{
-    background-color: var(--dark-header);
-  }
+    header{
+        background-color: var(--dark-header);
+    }
 
-  header>span{
-    color: var(--dark-text-color);
-  }
+    header>span{
+        color: var(--dark-text-color);
+    }
 
-  .profile{
-    background-color: var(--dark-bg-profile);
-  }
+    .profile{
+        background-color: var(--dark-bg-profile);
+    }
 
-  .description{
-    color: var(--dark-text-color);
-  }
+    .description{
+        color: var(--dark-text-color);
+    }
 }
 /* End of themes */
 
 /* For 4K screens */
-@media (min-width: 2000px){
-
-  header span{
-    font-size: 8rem;
-    letter-spacing: 10px;
-  }
-
-  .trigger{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-  }
-
-  .fa-moon{
-    flex: 1;
-    font-size: 60px;
-  }
-  
-  .fa-sun{
-    flex: 1;
-    font-size: 60px;
-  }
-
-  .pfp>img{
-    margin: 60px auto;
-  }
-
-  .description>h2{
-    font-size: 4rem;
-  }
-
-  .description>p{
-    font-size: 3rem;
-  }
-
-  .description>.lang{
-    font-size: 3.3rem;
-  }
-}
-
-/* 1450 to 1999 */
-@media (min-width: 1300px) and (max-width: 1999px){
-  header span{
-    font-size: 8rem;
-    letter-spacing: 10px;
-  }
-
-  .trigger{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-  }
-
-  .fa-moon{
-    font-size: 55px;
-  }
-
-  .fa-sun{
-    font-size: 55px;
-  }
-
-  .pfp>img{
-    margin: 20px auto;
-    width: 55%;
-  }
-
-  .lang{
-    font-size: 3.2rem;
-  }
-
-  .description>h2{
-    font-size: 3rem;
-  }
-
-  .description>p{
-    font-size: 2.3rem;
-  }
-
-  .description>span{
-    font-size: 1.7rem;
-  }
-}
-
-/* From 1000 to 1449*/
-@media (min-width: 1000px) and (max-width: 1299px){
-  .lang{
-    font-size: 2.4rem;
-  }
-
-  .links{
-    font-size: 2.2rem;
-  }
-
-  .profile>.icons>a>img{
-    width: 36px;
-  }
-}
-
-/* For tablet */
-@media (min-width: 651px) and (max-width: 998px){
-  main{
-    flex-direction: column;
-  }
-
-  .trigger{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: -80px;
-    height: 80px;
-    width: 80px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 10px;
-    background-color: var(--main-footer);
-  }
-
-  .fa-moon{
-    flex: 1;
-    color: var(--main-text-color);
-    font-size: 55px;
-  }
-
-  .fa-sun{
-    flex: 1;
-    font-size: 55px;
-  }
-
-  main{
-    padding-top: 40px;
-    padding-inline: 2rem;
-  }
-
-  .pfp{
-    width: 80%;
-  }
-}
-
-/* Mobile 350 to 650 */
-@media (min-width: 350px) and (max-width: 650px){
-  .profile{
-    display: none;
-  }
-
-  .wrapper{
-    grid-template-rows: 60px;
-  }
-
-  header{
-    padding-top: 3px;
-  }
-
-  header span{
-    font-size: 3rem;
-  }
-
-  .trigger{
-    bottom: -90px;
-    border-bottom-left-radius: 10px;
-  }
-
-  .description{
-    grid-column: 1/-1;
-  }
-
-  .description h1{
-    font-size: x-large;
-  }
-
-  .hidden-mobile{
-    display: block;
-    font-size: x-large;
-  }
-}
-
-/* For absolutely who!? 349 and lesser... 
-** Actually it's quite possible there's people
-** with screens with this resolution, I'm such an
-** ignorant, my apologies.
-*/
-@media (max-width: 349px){
-  .profile{
-    display: none;
-  }
-
-  .wrapper{
-    grid-template-rows: 60px;
-  }
-
-  header{
-    padding-top: 5px;
-  }
-
-  header span{
-    font-size: 2.7rem;
-  }
-
-  .trigger{
-    bottom: -90px;
-    border-bottom-left-radius: 10px;
-  }
-
-  .description{
-    grid-column: 1/-1;
-  }
-
-  .description h1{
-    font-size: x-large;
-  }
-
-  .hidden-mobile{
-    display: block;
-    font-size: x-large;
-  }
-}
+/* @media (min-width: 2000px){} */
