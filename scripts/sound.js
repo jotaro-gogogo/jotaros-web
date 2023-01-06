@@ -1,4 +1,4 @@
-let audio = document.getElementById("pronunciation");
+let audio = document.getElementById("audio");
 
 function playAudio() {
     audio.play();
