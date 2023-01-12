@@ -77,42 +77,6 @@ header span.light {
     font-family: "M PLUS 1", sans-serif;
 }
 
-.trigger {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 40px;
-    height: 40px;
-    border-top-left-radius: 10px;
-    background-color: #333;
-    cursor: pointer;
-    transition: background-color 0.5s;
-}
-
-.trigger.dark {
-    background-color: var(--dark-text-color);
-    transition: background-color 0.5s;
-}
-
-.trigger.light {
-    background-color: var(--main-bg-color);
-    transition: background-color 0.5s;
-}
-
-.fa-moon {
-    font-size: 32px;
-    color: #eee;
-    margin-top: 10%;
-    margin-left: 15%;
-}
-
-.fa-sun {
-    font-size: 32px;
-    color: #000;
-    margin-top: 11%;
-    margin-left: 5%;
-}
-
 a, a:visited {
     text-decoration: none;
     color: blue;
