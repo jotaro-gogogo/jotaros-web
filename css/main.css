@@ -173,9 +173,8 @@ a.light, a.light:visited {
     margin-top: 5px;
 }
 
-button {
+#speaker {
     cursor: pointer;
-    border: none;
     font-size: 1.3rem;
 
 }
@@ -210,10 +209,6 @@ button {
     .description {
         color: var(--main-text-color);
     }
-
-    button {
-        background-color: var(--main-bg-color);
-    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -240,10 +235,6 @@ button {
 
     .description {
         color: var(--dark-text-color);
-    }
-
-    button {
-        background-color: var(--dark-bg-color);
     }
 }
 
