@@ -1,8 +1,8 @@
 /* Variables */
 :root {
   /* Light mode */
-  --main-bg-color: white;
-  --main-text-color: black;
+  --main-bg-color: #fff;
+  --main-text-color: #000;
   --main-bg-profile: #073763;
 
   /* Dark mode */
@@ -166,8 +166,18 @@ a.light, a.light:visited {
     padding-bottom: 1rem;
 }
 
-#speaker {
+.fa-brands {
+    color: var(--main-bg-color);
+    font-size: 2.3rem;
+    letter-spacing: 10px;
+    margin-top: 5px;
+}
+
+button {
     cursor: pointer;
+    border: none;
+    font-size: 1.3rem;
+
 }
 
 .hidden-mobile {
@@ -200,6 +210,10 @@ a.light, a.light:visited {
     .description {
         color: var(--main-text-color);
     }
+
+    button {
+        background-color: var(--main-bg-color);
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -226,6 +240,10 @@ a.light, a.light:visited {
 
     .description {
         color: var(--dark-text-color);
+    }
+
+    button {
+        background-color: var(--dark-bg-color);
     }
 }
 
