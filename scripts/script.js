@@ -13,16 +13,14 @@ function changeTheme(){
   if(myTarget.classList.contains("dark")){
     for(let i=0; i<myList.length;i++){
       myList[i].classList.remove("dark");
-      myList[i].classList.add("light");
     }
-    myTarget.style.backgroundColor = "#333";
+    // myTarget.style.backgroundColor = "#333";
     myTarget.innerHTML = `<div class="moon"><i class="fa fa-moon"></i></div>`;
   } else {
     for(let i=0; i<myList.length;i++){
-      myList[i].classList.remove("light");
       myList[i].classList.add("dark");
     }
-    myTarget.style.backgroundColor = "#eee";
+    // myTarget.style.backgroundColor = "#eee";
     myTarget.innerHTML = `<div class="sun"><i class="fa fa-sun"></i></div>`;
   }
 }
