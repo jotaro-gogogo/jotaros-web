@@ -1,3 +1,5 @@
-document.getElementById("speaker").addEventListener("click", function() {
-    document.getElementById("pronunciation").play();
-});
+let audio = document.getElementById("pronunciation");
+
+function sitePlay(lang){
+  audio.play();
+}
