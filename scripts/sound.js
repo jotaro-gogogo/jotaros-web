@@ -1,5 +1,5 @@
-let audio = document.getElementById("pronunciation");
+let audio = new Audio("jotaro.mp3")
 
-function sitePlay(lang){
+function sitePlay(){
   audio.play();
 }
