@@ -1,303 +1,64 @@
 /* Variables */
-<<<<<<< HEAD
-:root{
-    /* Light mode */
-    --main-bg-color: white;
-    --main-text-color: black;
-    --main-bg-profile: #073763;
-  
-    /* Dark mode */
-    --dark-bg-color: #333;
-    --dark-header: #222;
-    --dark-text-color: #eee;
-    --dark-bg-profile: #111;
-  }
-  
-  /* Default (light) mode */
-  
-  body{
-    margin: 0;
-    height: 100vh;
-    background-color: var(--main-bg-color);
-    transition: background-color 0.4s;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  body.dark{
-    background-color: var(--dark-bg-color);
-    transition: background-color 0.5s;
-  }
-  body.light{
-    background-color: var(--main-bg-color);
-    transition: background-color 0.5s;
-  }
-  
-  .wrapper{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 105px;
-    height: 100vh;
-  }
-  
-  header{
-=======
 :root {
-  /* Light mode */
-  --main-bg-color: #fff;
-  --main-text-color: #000;
-  --main-bg-profile: #073763;
-  --main-click-color: #888;
+/* Light mode */
+--main-bg-color: #fff;
+--main-text-color: #000;
+--main-bg-profile: #073763;
+--main-click-color: #888;
 
-  /* Dark mode */
-  --dark-bg-color: #333;
-  --dark-header: #222;
-  --dark-text-color: #eee;
-  --dark-bg-profile: #111;
-  --dark-click-color: #888;
+/* Dark mode */
+--dark-bg-color: #333;
+--dark-header: #222;
+--dark-text-color: #eee;
+--dark-bg-profile: #111;
+--dark-click-color: #888;
 }
 
 /* Default (light) mode */
 
-body {
-  margin: 0;
-  height: 100vh;
-  background-color: var(--main-bg-color);
-  transition: background-color 0.4s;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+html {
+    height: 100%;
 }
 
+body {
+    margin: 0;
+    min-height: 100%;
+    background-color: var(--main-bg-color);
+    transition: background-color 0.4s;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+}
+/* 
 body.dark {
-  background-color: var(--dark-bg-color);
-  transition: background-color 0.5s;
+background-color: var(--dark-bg-color);
+transition: background-color 0.5s;
 }
 
 body.light {
-  background-color: var(--main-bg-color);
-  transition: background-color 0.5s;
+background-color: var(--main-bg-color);
+transition: background-color 0.5s;
+} */
+
+a, a:visited {
+    text-decoration: none;
+    color: blue;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 105px;
-  height: 100vh;
+/* a.dark, a.dark:visited {
+    color: #5996d4;
 }
+
+a.light, a.light:visited {
+    text-decoration: none;
+    color: blue;
+} */
 
 header {
-    padding-top: 7px;
->>>>>>> main
     border-bottom: 2px solid black;
     text-align: center;
-    grid-column: 1/-1;
-    position: relative;
     transition: background-color 0.5s;
-<<<<<<< HEAD
-  }
-  header.dark{
-    background-color: var(--dark-header);
-    transition: background-color 0.5s;
-  }
-  header.light{
-    background-color: var(--main-bg-color);
-    transition: background-color 0.5s;
-  }
-  
-  header span{
-    font-size: 5rem;
-    font-family: 'Bebas Neue', cursive;
-    color: var(--main-text-color);
-  }
-  header span.dark{
-    color: var(--dark-text-color);
-  }
-  header span.light{
-    color: black;
-  }
-  
-  .trigger{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 40px;
-    height: 40px;
-    border-top-left-radius: 10px;
-    background-color: #333;
-    cursor: pointer;
-    transition: background-color 0.5s;
-  }
-  .trigger.dark{
-    background-color: var(--dark-text-color);
-    transition: background-color 0.5s;
-  }
-  .trigger.light{
-    background-color: var(--main-bg-color);
-    transition: background-color 0.5s;
-  }
-  
-  .fa-moon{
-    font-size: 32px;
-    color: #eee;
-    margin-top: 10%;
-    margin-left: 15%;
-  }
-  
-  .fa-sun{
-    font-size: 32px;
-    color: #000;
-    margin-top: 11%;
-    margin-left: 5%;
-  }
-
-  .fa-github, .fa-twitter, .fa-youtube, .fa-xbox {
-    color: white;
-    font-size: 2.5rem;
-    margin: 3px;
-  }
-  
-  a, a:visited{
-    text-decoration: none;
-    color: blue;
-  }
-  a.dark, a.dark:visited{
-    color: #5996d4;
-  }
-  a.light, a.light:visited{
-    text-decoration: none;
-    color: blue;
-  }
-  
-  .profile{
-    border-right: 2px solid black;
-    background-color: var(--main-bg-profile);
-    grid-column: 1;
-    grid-row: 2/-1;
-    height: 100%;
-    transition: background-color 0.5s;
-  }
-  .profile.dark{
-    background-color: var(--dark-bg-profile);
-    transition: background-color 0.5s;
-    
-  }
-  .profile.light{
-    background-color: var(--main-bg-profile);
-    transition: background-color 0.5s;
-    
-  }
-  
-  .pfp{
-    margin: 15px auto; 
-  }
-  .pfp>img{
-    border: 3px white solid;
-    border-radius: 50%;
-    width: 80%;
-  }
-  
-  .profile div {
-    text-align: center;
-  }
-  
-  .lang{
-    font-size: 2.5rem;
-    letter-spacing: 15px;
-  }
-  
-  .links{
-    color: var(--main-bg-color);
-    font-weight: bold;
-    padding-top: 25px;
-    font-size: xx-large;
-  }
-  
-  .icons{
-    margin-top: 10px;
-  }
-  
-  .icons a img{
-    width: 32px;
-  }
-  
-  .description{
-    margin: 0 2rem;
-    grid-column: 2/-1;
-  }
-  .description.dark{
-    color: var(--dark-text-color);
-  }
-  .description.light{
-    color: black;
-  }
-  
-  .description p{
-    font-size: 1.3rem;
-  }
-  
-  .description>span{
-    padding-bottom: 1rem;
-  }
-  
-  .hidden-mobile{
-    display: none;
-  }
-  
-  /* Themes */
-  @media (prefers-color-scheme: light){
-    body{
-      background-color: var(--main-bg-color);
-    }
-  
-    a, a:visited{
-      text-decoration: none;
-      color: blue;
-    }
-  
-    header{
-      background-color: var(--main-bg-color);
-    }
-  
-    header>span{
-      color: var(--main-text-color);
-    }
-  
-    .profile{
-      background-color: var(--main-bg-profile);
-    }
-  
-    .description{
-      color: var(--main-text-color);
-    }
-  }
-  
-  @media (prefers-color-scheme: dark){
-    body{
-      background-color: var(--dark-bg-color);
-    }
-  
-    a, a:visited{
-      text-decoration: none;
-      color: #5996d4;
-    }
-  
-    header{
-      background-color: var(--dark-header);
-    }
-  
-    header>span{
-      color: var(--dark-text-color);
-    }
-  
-    .profile{
-      background-color: var(--dark-bg-profile);
-    }
-  
-    .description{
-      color: var(--dark-text-color);
-    }
-  }
-=======
 }
 
-header.dark {
+/* header.dark {
     background-color: var(--dark-header);
     transition: background-color 0.5s;
 }
@@ -305,74 +66,64 @@ header.dark {
 header.light {
     background-color: var(--main-bg-color);
     transition: background-color 0.5s;
-}
+} */
 
 header>span {
-    margin-top: -10px;
     font-size: 5rem;
     font-family: 'Bebas Neue', cursive;
     color: var(--main-text-color);
 }
 
-header span.dark {
+/* header span.dark {
     color: var(--dark-text-color);
 }
 
 header span.light {
     color: black;
-}
+} */
 
-#japanese {
+/* #japanese {
     font-family: "M PLUS 1", sans-serif;
+} */
+
+#container {
+    margin: 0;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-wrap: wrap;
 }
 
-a, a:visited {
-    text-decoration: none;
-    color: blue;
-}
-
-a.dark, a.dark:visited {
-    color: #5996d4;
-}
-
-a.light, a.light:visited {
-    text-decoration: none;
-    color: blue;
-}
-
-.profile {
+#sidebar {
+    flex: 1;
     border-right: 2px solid black;
     background-color: var(--main-bg-profile);
-    grid-column: 1;
-    grid-row: 2/-1;
-    height: 100%;
     transition: background-color 0.5s;
 }
-
+/* 
 .profile.dark {
     background-color: var(--dark-bg-profile);
     transition: background-color 0.5s;
-  
+
 }
 
 .profile.light {
     background-color: var(--main-bg-profile);
     transition: background-color 0.5s;
-  
+
+} */
+
+#sidebar div {
+    text-align: center;
 }
 
-.pfp {
+#pfp {
     margin: 15px auto; 
 }
 
-.pfp>img {
+#pfp>img {
     border: 3px white solid;
     border-radius: 50%;
     width: 80%;
-}
-
-.profile div {
-    text-align: center;
 }
 
 .lang {
@@ -394,24 +145,24 @@ a.light, a.light:visited {
     width: 32px;
 }
 
-.description {
+#about {
+    flex: 60%;
     margin: 0 2rem;
-    grid-column: 2/-1;
 }
-
+/* 
 .description.dark {
     color: var(--dark-text-color);
 }
 
 .description.light {
     color: black;
-}
+} */
 
-.description p {
+#about p {
     font-size: 1.3rem;
 }
 
-.description>span {
+#about>span {
     padding-bottom: 1rem;
 }
 
@@ -438,8 +189,8 @@ a.light, a.light:visited {
 .hidden-mobile {
     display: none;
 }
-
-/* Themes */
+/* 
+/* Themes **
 @media (prefers-color-scheme: light) {
     body {
         background-color: var(--main-bg-color);
@@ -503,7 +254,7 @@ a.light, a.light:visited {
     }
 }
 
-/* For 4K screens */
+/* For 4K screens **
 @media (min-width: 2150px){
     .wrapper {
         grid-template-columns: repeat(9, 1fr);
@@ -559,7 +310,7 @@ a.light, a.light:visited {
     }
 }
 
-/* 1450 to 2149 */
+/* 1450 to 2149 **
 @media (min-width: 1450px) and (max-width: 2149px) {
     .wrapper {
         grid-template-rows: 150px;
@@ -599,7 +350,7 @@ a.light, a.light:visited {
     }
 }
 
-/* From 1200 to 1449, because sidebar info would look weird */
+/* From 1200 to 1449, because sidebar info would look weird **
 @media (min-width: 1200px) and (max-width: 1449px) {
     .lang {
         font-size: 2.4rem;
@@ -614,7 +365,7 @@ a.light, a.light:visited {
     }
 }
 
-/* For mid size laptop screen */
+/* For mid size laptop screen **
 @media (min-width: 1000px) and (max-width: 1199px) {
     .lang {
         font-size: 1.8rem;
@@ -630,7 +381,7 @@ a.light, a.light:visited {
     }
 }
 
-/* For tablet */
+/* For tablet **
 @media (min-width: 651px) and (max-width: 999px) {
     .profile {
         display: none;
@@ -651,7 +402,7 @@ a.light, a.light:visited {
     }
 }
 
-/* Mobile 350 to 650 */
+/* Mobile 350 to 650 **
 @media (min-width: 350px) and (max-width: 650px) {
     .profile {
         display: none;
@@ -692,7 +443,7 @@ a.light, a.light:visited {
 ** Actually it's quite possible there's people
 ** with screens with this resolution, I'm such an
 ** ignorant, my apologies.
-*/
+**
 @media (max-width: 349px) {
     .profile {
         display: none;
@@ -722,10 +473,9 @@ a.light, a.light:visited {
     .description h1 {
         font-size: x-large;
     }
- 
+
     .hidden-mobile {
         display: block;
         font-size: x-large;
     }
-}
->>>>>>> main
+} */
