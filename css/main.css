@@ -15,6 +15,7 @@
 }
 
 /* Default (light) mode */
+* { transition: background-color 0.5s; }
 
 html {
     height: 100%;
@@ -27,30 +28,11 @@ body {
     transition: background-color 0.4s;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
 }
-/* 
-body.dark {
-background-color: var(--dark-bg-color);
-transition: background-color 0.5s;
-}
-
-body.light {
-background-color: var(--main-bg-color);
-transition: background-color 0.5s;
-} */
 
 a, a:visited {
     text-decoration: none;
     color: blue;
 }
-
-/* a.dark, a.dark:visited {
-    color: #5996d4;
-}
-
-a.light, a.light:visited {
-    text-decoration: none;
-    color: blue;
-} */
 
 header {
     border-bottom: 2px solid black;
@@ -58,33 +40,11 @@ header {
     transition: background-color 0.5s;
 }
 
-/* header.dark {
-    background-color: var(--dark-header);
-    transition: background-color 0.5s;
-}
-
-header.light {
-    background-color: var(--main-bg-color);
-    transition: background-color 0.5s;
-} */
-
 header>span {
     font-size: 5rem;
     font-family: 'Bebas Neue', cursive;
     color: var(--main-text-color);
 }
-
-/* header span.dark {
-    color: var(--dark-text-color);
-}
-
-header span.light {
-    color: black;
-} */
-
-/* #japanese {
-    font-family: "M PLUS 1", sans-serif;
-} */
 
 #container {
     margin: 0;
@@ -99,18 +59,6 @@ header span.light {
     background-color: var(--main-bg-profile);
     transition: background-color 0.5s;
 }
-/* 
-.profile.dark {
-    background-color: var(--dark-bg-profile);
-    transition: background-color 0.5s;
-
-}
-
-.profile.light {
-    background-color: var(--main-bg-profile);
-    transition: background-color 0.5s;
-
-} */
 
 #sidebar div {
     text-align: center;
@@ -127,7 +75,8 @@ header span.light {
 }
 
 .lang {
-    font-size: xx-large;
+    font-size: 2.8rem;
+    margin-bottom: -10px;
 }
 
 .links {
@@ -145,14 +94,6 @@ header span.light {
     flex: 60%;
     margin: 0 2rem;
 }
-/* 
-.description.dark {
-    color: var(--dark-text-color);
-}
-
-.description.light {
-    color: black;
-} */
 
 #about p {
     font-size: 1.3rem;
@@ -185,85 +126,103 @@ header span.light {
 .hidden-mobile {
     display: none;
 }
-/* 
-/* Themes **
+
+/* Themes */
 @media (prefers-color-scheme: light) {
     body {
         background-color: var(--main-bg-color);
+        transition: background-color 0.5s;
     }
 
     a, a:visited {
         text-decoration: none;
         color: blue;
+        transition: background-color 0.5s;
     }
 
     header {
         background-color: var(--main-bg-color);
+        transition: background-color 0.5s;
     }
 
     header>span {
         color: var(--main-text-color);
+        transition: background-color 0.5s;
     }
 
     .profile {
         background-color: var(--main-bg-profile);
+        transition: background-color 0.5s;
     }
 
     .description {
         color: var(--main-text-color);
+        transition: background-color 0.5s;
     }
 }
 
 @media (prefers-color-scheme: dark) {
     body {
         background-color: var(--dark-bg-color);
+        color: var(--dark-text-color);
+        transition: background-color 0.5s;
     }
 
     a, a:visited {
         text-decoration: none;
         color: #5996d4;
+        transition: background-color 0.5s;
     }
 
     header {
         background-color: var(--dark-header);
+        transition: background-color 0.5s;
     }
 
     header>span {
         color: var(--dark-text-color);
+        transition: background-color 0.5s;
     }
 
     .profile {
         background-color: var(--dark-bg-profile);
+        transition: background-color 0.5s;
     }
 
     .description {
         color: var(--dark-text-color);
+        transition: background-color 0.5s;
     }
 
     #speaker {
         border-color: var(--dark-text-color);
+        transition: background-color 0.5s;
     }
 
     #speaker:active {
         border-color: var(--dark-click-color);
         background-color: var(--dark-click-color);
+        transition: background-color 0.5s;
     }
-} */
+}
 
-/* For 4K screens */
-@media (min-width: 2560px) {
+@media (min-width: 2160px) {
     header span {
-        font-size: 10rem;
+        font-size: 6rem;
         letter-spacing: 10px;
     }
 
     #pfp>img {
         margin: 20px auto;
-        border: 10px white solid;
+        border: 5px white solid;
     }
 
-    .lang, .links, .fa-brands, #about>h1 {
-        font-size: 5rem;
+    .links, .fa-brands, #about>h1 {
+        font-size: 3rem;
+    }
+
+    .lang {
+        font-size: 3.7rem;
     }
 
     .fa-brands {
@@ -271,38 +230,6 @@ header span.light {
     }
 
     #about {
-        margin: 0 8rem;
-    }
-
-    #about>p {
-        font-size: 4rem;
-    }
-}
-
-/* HD Screens */
-@media (min-width: 1280px) and (max-width: 2559px) {
-    .lang {
-        font-size: 3.7rem;
-    }
-
-    .links, .fa-brands, #about>h1 {
-        font-size: 3rem;
-    }
-
-    #sidebar {
-        flex: 1 0 0;
-    }
-
-    #pfp {
-        margin: 25px 0;
-    }
-
-    #pfp>img {
-        border: 5px white solid;
-    }
-
-    #about {
-        flex: 50%;
         margin: 0 4rem;
     }
 
@@ -311,117 +238,69 @@ header span.light {
     }
 }
 
-/* For mid size laptop screen **
-@media (min-width: 1000px) and (max-width: 1199px) {
+@media (min-width: 1550px) and (max-width: 2159px) {
+    .links, .fa-brands, #about>h1 {
+        font-size: 2.5rem;
+    }
+
     .lang {
-        font-size: 1.8rem;
-        margin-bottom: -10px;
-    }
-
-    .links {
-        font-size: 1.5rem;
-    }
-
-    .profile>.icons>a>img {
-        width: 1.7rem;
-    }
-}
-
-/* For tablet **
-@media (min-width: 651px) and (max-width: 999px) {
-    .profile {
-        display: none;
-    }
-
-    .trigger {
-        bottom: -105px;
-        border-bottom-left-radius: 10px;
-    }
-
-    .description {
-        grid-column: 1/-1;
-    }
-
-    .hidden-mobile {
-        display: block;
-        font-size: x-large;
-    }
-}
-
-/* Mobile 350 to 650 **
-@media (min-width: 350px) and (max-width: 650px) {
-    .profile {
-        display: none;
-    }
-
-    .wrapper {
-        grid-template-rows: 60px;
-    }
-
-    header {
-        padding-top: 3px;
-    }
-
-    header span {
         font-size: 3rem;
     }
 
-    .trigger {
-        bottom: -90px;
-        border-bottom-left-radius: 10px;
-    }
-
-    .description {
-        grid-column: 1/-1;
-    }
-
-    .description h1 {
-        font-size: x-large;
-    }
-
-    .hidden-mobile {
-        display: block;
-        font-size: x-large;
+    #about>p {
+        font-size: 1.6rem;
     }
 }
 
-/* For absolutely who!? 349 and lesser... 
-** Actually it's quite possible there's people
-** with screens with this resolution, I'm such an
-** ignorant, my apologies.
-**
-@media (max-width: 349px) {
-    .profile {
+@media (min-width: 1100px) and (max-width: 1299px) {
+    .links, #about>h1 {
+        font-size: 1.8rem;
+    }
+
+    .lang {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1099px) {
+    #sidebar, #sidebar>* {
         display: none;
-    }
-
-    .wrapper {
-        grid-template-rows: 60px;
-    }
-
-    header {
-        padding-top: 5px;
-    }
-
-    header span {
-        font-size: 2.7rem;
-    }
-
-    .trigger {
-        bottom: -90px;
-        border-bottom-left-radius: 10px;
-    }
-
-    .description {
-        grid-column: 1/-1;
-    }
-
-    .description h1 {
-        font-size: x-large;
     }
 
     .hidden-mobile {
         display: block;
-        font-size: x-large;
+        font-size: 1.8rem;
     }
-} */
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+    #about {
+        margin: 0 3rem;
+    }
+
+    #about>h1 {
+        font-size: 2.6rem;
+    }
+
+    #about>p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 599px) {
+    header>span {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 440px) and (max-width: 599px) {
+    #about>p {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 439px) {
+    #about>p {
+        font-size: 1.5rem;
+    }
+}
