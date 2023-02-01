@@ -18,11 +18,11 @@
 * { transition: background-color 0.5s; }
 
 body {
-margin: 0;
-height: 100vh;
-background-color: var(--main-bg-color);
-transition: background-color 0.4s;
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+    transition: background-color 0.4s;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
 }
 
 a, a:visited {
@@ -138,33 +138,27 @@ header>span {
 @media (prefers-color-scheme: light) {
     body {
         background-color: var(--main-bg-color);
-        transition: background-color 0.5s;
     }
 
     a, a:visited {
         text-decoration: none;
         color: blue;
-        transition: background-color 0.5s;
     }
 
     header {
         background-color: var(--main-bg-color);
-        transition: background-color 0.5s;
     }
 
     header>span {
         color: var(--main-text-color);
-        transition: background-color 0.5s;
     }
 
     .profile {
         background-color: var(--main-bg-profile);
-        transition: background-color 0.5s;
     }
 
     .description {
         color: var(--main-text-color);
-        transition: background-color 0.5s;
     }
 }
 
@@ -172,44 +166,36 @@ header>span {
     body {
         background-color: var(--dark-bg-color);
         color: var(--dark-text-color);
-        transition: background-color 0.5s;
     }
 
     a, a:visited {
         text-decoration: none;
         color: #5996d4;
-        transition: background-color 0.5s;
     }
 
     header {
         background-color: var(--dark-header);
-        transition: background-color 0.5s;
     }
 
     header>span {
         color: var(--dark-text-color);
-        transition: background-color 0.5s;
     }
 
     .profile {
         background-color: var(--dark-bg-profile);
-        transition: background-color 0.5s;
     }
 
     .description {
         color: var(--dark-text-color);
-        transition: background-color 0.5s;
     }
 
     #speaker {
         border-color: var(--dark-text-color);
-        transition: background-color 0.5s;
     }
 
     #speaker:active {
         border-color: var(--dark-click-color);
         background-color: var(--dark-click-color);
-        transition: background-color 0.5s;
     }
 }
 
