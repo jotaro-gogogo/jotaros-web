@@ -1,25 +1,29 @@
 /* Variables */
 :root {
-/* Light mode */
---main-bg-color: #fff;
---main-text-color: #000;
---main-bg-profile: #073763;
---main-click-color: #888;
-
-/* Dark mode */
---dark-bg-color: #333;
---dark-header: #222;
---dark-text-color: #eee;
---dark-bg-profile: #111;
---dark-click-color: #888;
+    /* Light mode */
+    --main-bg-color: #fff;
+    --main-text-color: #000;
+    --main-bg-profile: #073763;
+    --main-click-color: #888;
+    
+    /* Dark mode */
+    --dark-bg-color: #333;
+    --dark-header: #222;
+    --dark-text-color: #eee;
+    --dark-bg-profile: #111;
+    --dark-click-color: #888;
 }
 
 /* Default (light) mode */
 * { transition: background-color 0.5s; }
 
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100%;
     background-color: var(--main-bg-color);
     transition: background-color 0.4s;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
@@ -31,16 +35,11 @@ a, a:visited {
 }
 
 header {
-    padding-top: 7px;
     border-bottom: 2px solid black;
     text-align: center;
-    grid-column: 1/-1;
-    position: relative;
-    transition: background-color 0.5s;
 }
 
 header>span {
-    margin-top: -10px;
     font-size: 5rem;
     font-family: 'Bebas Neue', cursive;
     color: var(--main-text-color);
@@ -53,31 +52,24 @@ header>span {
     flex-wrap: wrap;
 }
 
-.profile {
+#sidebar {
+    flex: 1;
     border-right: 2px solid black;
     background-color: var(--main-bg-profile);
-    grid-column: 1;
-    grid-row: 2/-1;
-    height: 100%;
-    transition: background-color 0.5s;
 }
 
 #sidebar div {
     text-align: center;
 }
 
-.pfp {
+#pfp {
     margin: 15px auto; 
 }
 
-.pfp>img {
+#pfp>img {
     border: 3px white solid;
     border-radius: 50%;
     width: 80%;
-}
-
-.profile div {
-    text-align: center;
 }
 
 .lang {
@@ -99,14 +91,13 @@ header>span {
 #about {
     flex: 60%;
     margin: 0 2rem;
-    grid-column: 2/-1;
 }
 
-.description p {
+#about p {
     font-size: 1.3rem;
 }
 
-.description>span {
+#about>span {
     padding-bottom: 1rem;
 }
 
@@ -153,11 +144,11 @@ header>span {
         color: var(--main-text-color);
     }
 
-    .profile {
+    #sidebar {
         background-color: var(--main-bg-profile);
     }
 
-    .description {
+    #about {
         color: var(--main-text-color);
     }
 }
@@ -181,11 +172,11 @@ header>span {
         color: var(--dark-text-color);
     }
 
-    .profile {
+    #sidebar {
         background-color: var(--dark-bg-profile);
     }
 
-    .description {
+    #about {
         color: var(--dark-text-color);
     }
 
