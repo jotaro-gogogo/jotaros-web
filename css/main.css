@@ -17,16 +17,85 @@
 /* Default (light) mode */
 * { transition: background-color 0.5s; }
 
-html {
-    height: 100%;
+body {
+margin: 0;
+height: 100vh;
+background-color: var(--main-bg-color);
+transition: background-color 0.4s;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
 }
 
-body {
-    margin: 0;
-    min-height: 100%;
+<<<<<<< HEAD
+a, a:visited {
+    text-decoration: none;
+    color: blue;
+}
+
+=======
+body.dark {
+background-color: var(--dark-bg-color);
+transition: background-color 0.5s;
+}
+
+body.light {
+background-color: var(--main-bg-color);
+transition: background-color 0.5s;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 105px;
+    height: 100vh;
+}
+
+>>>>>>> main
+header {
+    padding-top: 7px;
+    border-bottom: 2px solid black;
+    text-align: center;
+    grid-column: 1/-1;
+    position: relative;
+    transition: background-color 0.5s;
+}
+
+<<<<<<< HEAD
+=======
+header.dark {
+    background-color: var(--dark-header);
+    transition: background-color 0.5s;
+}
+
+header.light {
     background-color: var(--main-bg-color);
-    transition: background-color 0.4s;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+    transition: background-color 0.5s;
+}
+
+>>>>>>> main
+header>span {
+    margin-top: -10px;
+    font-size: 5rem;
+    font-family: 'Bebas Neue', cursive;
+    color: var(--main-text-color);
+}
+
+<<<<<<< HEAD
+#container {
+    margin: 0;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-wrap: wrap;
+=======
+header span.dark {
+    color: var(--dark-text-color);
+}
+
+header span.light {
+    color: black;
+}
+
+#japanese {
+    font-family: "M PLUS 1", sans-serif;
 }
 
 a, a:visited {
@@ -34,44 +103,54 @@ a, a:visited {
     color: blue;
 }
 
-header {
-    border-bottom: 2px solid black;
-    text-align: center;
-    transition: background-color 0.5s;
+a.dark, a.dark:visited {
+    color: #5996d4;
 }
 
-header>span {
-    font-size: 5rem;
-    font-family: 'Bebas Neue', cursive;
-    color: var(--main-text-color);
+a.light, a.light:visited {
+    text-decoration: none;
+    color: blue;
+>>>>>>> main
 }
 
-#container {
-    margin: 0;
-    height: calc(100vh - 100px);
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#sidebar {
-    flex: 1;
+.profile {
     border-right: 2px solid black;
     background-color: var(--main-bg-profile);
+    grid-column: 1;
+    grid-row: 2/-1;
+    height: 100%;
     transition: background-color 0.5s;
 }
 
+<<<<<<< HEAD
 #sidebar div {
     text-align: center;
+=======
+.profile.dark {
+    background-color: var(--dark-bg-profile);
+    transition: background-color 0.5s;
+
 }
 
-#pfp {
+.profile.light {
+    background-color: var(--main-bg-profile);
+    transition: background-color 0.5s;
+
+>>>>>>> main
+}
+
+.pfp {
     margin: 15px auto; 
 }
 
-#pfp>img {
+.pfp>img {
     border: 3px white solid;
     border-radius: 50%;
     width: 80%;
+}
+
+.profile div {
+    text-align: center;
 }
 
 .lang {
@@ -90,16 +169,36 @@ header>span {
     margin-top: 10px;
 }
 
+<<<<<<< HEAD
 #about {
     flex: 60%;
-    margin: 0 2rem;
+=======
+.icons a img {
+    width: 32px;
 }
 
-#about p {
+.description {
+>>>>>>> main
+    margin: 0 2rem;
+    grid-column: 2/-1;
+}
+<<<<<<< HEAD
+=======
+
+.description.dark {
+    color: var(--dark-text-color);
+}
+
+.description.light {
+    color: black;
+}
+>>>>>>> main
+
+.description p {
     font-size: 1.3rem;
 }
 
-#about>span {
+.description>span {
     padding-bottom: 1rem;
 }
 
@@ -206,7 +305,17 @@ header>span {
     }
 }
 
+<<<<<<< HEAD
 @media (min-width: 2160px) {
+=======
+/* For 4K screens */
+@media (min-width: 2150px){
+    .wrapper {
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: 150px;
+    }
+
+>>>>>>> main
     header span {
         font-size: 6rem;
         letter-spacing: 10px;
@@ -238,9 +347,25 @@ header>span {
     }
 }
 
+<<<<<<< HEAD
 @media (min-width: 1550px) and (max-width: 2159px) {
     .links, .fa-brands, #about>h1 {
         font-size: 2.5rem;
+=======
+/* 1450 to 2149 */
+@media (min-width: 1450px) and (max-width: 2149px) {
+    .wrapper {
+        grid-template-rows: 150px;
+    }
+
+    header span {
+        font-size: 8rem;
+        letter-spacing: 10px;
+    }
+
+    .pfp>img {
+        margin: 20px auto;
+>>>>>>> main
     }
 
     .lang {
@@ -252,8 +377,29 @@ header>span {
     }
 }
 
+<<<<<<< HEAD
 @media (min-width: 1100px) and (max-width: 1299px) {
     .links, #about>h1 {
+=======
+/* From 1200 to 1449, because sidebar info would look weird */
+@media (min-width: 1200px) and (max-width: 1449px) {
+    .lang {
+        font-size: 2.4rem;
+    }
+
+    .links {
+        font-size: 2.2rem;
+    }
+
+    .profile>.icons>a>img {
+        width: 36px;
+    }
+}
+
+/* For mid size laptop screen */
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .lang {
+>>>>>>> main
         font-size: 1.8rem;
     }
 
@@ -262,8 +408,14 @@ header>span {
     }
 }
 
+<<<<<<< HEAD
 @media (max-width: 1099px) {
     #sidebar, #sidebar>* {
+=======
+/* For tablet */
+@media (min-width: 651px) and (max-width: 999px) {
+    .profile {
+>>>>>>> main
         display: none;
     }
 
@@ -273,9 +425,16 @@ header>span {
     }
 }
 
+<<<<<<< HEAD
 @media (min-width: 600px) and (max-width: 800px) {
     #about {
         margin: 0 3rem;
+=======
+/* Mobile 350 to 650 */
+@media (min-width: 350px) and (max-width: 650px) {
+    .profile {
+        display: none;
+>>>>>>> main
     }
 
     #about>h1 {
@@ -293,9 +452,45 @@ header>span {
     }
 }
 
+<<<<<<< HEAD
 @media (min-width: 440px) and (max-width: 599px) {
     #about>p {
         font-size: 2rem;
+=======
+/* For absolutely who!? 349 and lesser... 
+** Actually it's quite possible there's people
+** with screens with this resolution, I'm such an
+** ignorant, my apologies.
+*/
+@media (max-width: 349px) {
+    .profile {
+        display: none;
+    }
+
+    .wrapper {
+        grid-template-rows: 60px;
+    }
+
+    header {
+        padding-top: 5px;
+    }
+
+    header span {
+        font-size: 2.7rem;
+    }
+
+    .trigger {
+        bottom: -90px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .description {
+        grid-column: 1/-1;
+    }
+
+    .description h1 {
+        font-size: x-large;
+>>>>>>> main
     }
 }
 
@@ -303,4 +498,8 @@ header>span {
     #about>p {
         font-size: 1.5rem;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main
