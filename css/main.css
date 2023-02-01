@@ -25,31 +25,11 @@ transition: background-color 0.4s;
 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
 }
 
-<<<<<<< HEAD
 a, a:visited {
     text-decoration: none;
     color: blue;
 }
 
-=======
-body.dark {
-background-color: var(--dark-bg-color);
-transition: background-color 0.5s;
-}
-
-body.light {
-background-color: var(--main-bg-color);
-transition: background-color 0.5s;
-}
-
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 105px;
-    height: 100vh;
-}
-
->>>>>>> main
 header {
     padding-top: 7px;
     border-bottom: 2px solid black;
@@ -59,19 +39,6 @@ header {
     transition: background-color 0.5s;
 }
 
-<<<<<<< HEAD
-=======
-header.dark {
-    background-color: var(--dark-header);
-    transition: background-color 0.5s;
-}
-
-header.light {
-    background-color: var(--main-bg-color);
-    transition: background-color 0.5s;
-}
-
->>>>>>> main
 header>span {
     margin-top: -10px;
     font-size: 5rem;
@@ -79,38 +46,11 @@ header>span {
     color: var(--main-text-color);
 }
 
-<<<<<<< HEAD
 #container {
     margin: 0;
     height: calc(100vh - 100px);
     display: flex;
     flex-wrap: wrap;
-=======
-header span.dark {
-    color: var(--dark-text-color);
-}
-
-header span.light {
-    color: black;
-}
-
-#japanese {
-    font-family: "M PLUS 1", sans-serif;
-}
-
-a, a:visited {
-    text-decoration: none;
-    color: blue;
-}
-
-a.dark, a.dark:visited {
-    color: #5996d4;
-}
-
-a.light, a.light:visited {
-    text-decoration: none;
-    color: blue;
->>>>>>> main
 }
 
 .profile {
@@ -122,21 +62,8 @@ a.light, a.light:visited {
     transition: background-color 0.5s;
 }
 
-<<<<<<< HEAD
 #sidebar div {
     text-align: center;
-=======
-.profile.dark {
-    background-color: var(--dark-bg-profile);
-    transition: background-color 0.5s;
-
-}
-
-.profile.light {
-    background-color: var(--main-bg-profile);
-    transition: background-color 0.5s;
-
->>>>>>> main
 }
 
 .pfp {
@@ -169,30 +96,11 @@ a.light, a.light:visited {
     margin-top: 10px;
 }
 
-<<<<<<< HEAD
 #about {
     flex: 60%;
-=======
-.icons a img {
-    width: 32px;
-}
-
-.description {
->>>>>>> main
     margin: 0 2rem;
     grid-column: 2/-1;
 }
-<<<<<<< HEAD
-=======
-
-.description.dark {
-    color: var(--dark-text-color);
-}
-
-.description.light {
-    color: black;
-}
->>>>>>> main
 
 .description p {
     font-size: 1.3rem;
@@ -305,17 +213,7 @@ a.light, a.light:visited {
     }
 }
 
-<<<<<<< HEAD
 @media (min-width: 2160px) {
-=======
-/* For 4K screens */
-@media (min-width: 2150px){
-    .wrapper {
-        grid-template-columns: repeat(9, 1fr);
-        grid-template-rows: 150px;
-    }
-
->>>>>>> main
     header span {
         font-size: 6rem;
         letter-spacing: 10px;
@@ -347,25 +245,9 @@ a.light, a.light:visited {
     }
 }
 
-<<<<<<< HEAD
 @media (min-width: 1550px) and (max-width: 2159px) {
     .links, .fa-brands, #about>h1 {
         font-size: 2.5rem;
-=======
-/* 1450 to 2149 */
-@media (min-width: 1450px) and (max-width: 2149px) {
-    .wrapper {
-        grid-template-rows: 150px;
-    }
-
-    header span {
-        font-size: 8rem;
-        letter-spacing: 10px;
-    }
-
-    .pfp>img {
-        margin: 20px auto;
->>>>>>> main
     }
 
     .lang {
@@ -377,29 +259,8 @@ a.light, a.light:visited {
     }
 }
 
-<<<<<<< HEAD
 @media (min-width: 1100px) and (max-width: 1299px) {
     .links, #about>h1 {
-=======
-/* From 1200 to 1449, because sidebar info would look weird */
-@media (min-width: 1200px) and (max-width: 1449px) {
-    .lang {
-        font-size: 2.4rem;
-    }
-
-    .links {
-        font-size: 2.2rem;
-    }
-
-    .profile>.icons>a>img {
-        width: 36px;
-    }
-}
-
-/* For mid size laptop screen */
-@media (min-width: 1000px) and (max-width: 1199px) {
-    .lang {
->>>>>>> main
         font-size: 1.8rem;
     }
 
@@ -408,14 +269,8 @@ a.light, a.light:visited {
     }
 }
 
-<<<<<<< HEAD
 @media (max-width: 1099px) {
     #sidebar, #sidebar>* {
-=======
-/* For tablet */
-@media (min-width: 651px) and (max-width: 999px) {
-    .profile {
->>>>>>> main
         display: none;
     }
 
@@ -425,16 +280,9 @@ a.light, a.light:visited {
     }
 }
 
-<<<<<<< HEAD
 @media (min-width: 600px) and (max-width: 800px) {
     #about {
         margin: 0 3rem;
-=======
-/* Mobile 350 to 650 */
-@media (min-width: 350px) and (max-width: 650px) {
-    .profile {
-        display: none;
->>>>>>> main
     }
 
     #about>h1 {
@@ -452,45 +300,9 @@ a.light, a.light:visited {
     }
 }
 
-<<<<<<< HEAD
 @media (min-width: 440px) and (max-width: 599px) {
     #about>p {
         font-size: 2rem;
-=======
-/* For absolutely who!? 349 and lesser... 
-** Actually it's quite possible there's people
-** with screens with this resolution, I'm such an
-** ignorant, my apologies.
-*/
-@media (max-width: 349px) {
-    .profile {
-        display: none;
-    }
-
-    .wrapper {
-        grid-template-rows: 60px;
-    }
-
-    header {
-        padding-top: 5px;
-    }
-
-    header span {
-        font-size: 2.7rem;
-    }
-
-    .trigger {
-        bottom: -90px;
-        border-bottom-left-radius: 10px;
-    }
-
-    .description {
-        grid-column: 1/-1;
-    }
-
-    .description h1 {
-        font-size: x-large;
->>>>>>> main
     }
 }
 
@@ -498,8 +310,4 @@ a.light, a.light:visited {
     #about>p {
         font-size: 1.5rem;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main
